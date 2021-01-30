@@ -1,5 +1,4 @@
 .hero {
-  background-color: $buff;
   height: 100vh;
   text-align: center;
 
@@ -9,6 +8,7 @@
 
   h2 {
     @include font-quote($lh: $medium-line-height);
+    text-transform: uppercase;
   }
 
   p {
