@@ -1,0 +1,36 @@
+.contact-form {
+  width: 100%;
+
+  fieldset {
+    border: none;
+    padding: 1.2em 0;
+  }
+
+  textarea {
+    @include input-font();
+    @include input-styles(4em);
+  }
+
+  input {
+    @include input-font();
+    @include input-styles();
+  }
+
+  button {
+    background-color: $orange;
+    border: none;
+    color: $white;
+    font-family: 'Archivo Regular', sans-serif;
+    font-size: $small-text-size;
+    padding: 1em;
+  }
+
+  label {
+    @include small-text($size: 1em, $transform: uppercase);
+  }
+
+  span.error {
+    @include small-text($transform: uppercase, $color: $orange);
+    padding: 1.2em 0;
+  }
+}

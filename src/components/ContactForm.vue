@@ -1,7 +1,7 @@
 <template>
   <section class="modal-background">
     <article class="modal-body">
-      <form @submit="validateForm" novalidate="true">
+      <form class="contact-form" @submit="validateForm" novalidate="true">
         <fieldset>
           <label for="name">Full Name</label>
           <input
