@@ -1,5 +1,5 @@
 <template>
-  <section class="hero md-layout-item">
+  <section class="hero md-layout-item md-size-100">
     <picture>
       <img
         src="../assets/images/F-210_shadowed.png"
