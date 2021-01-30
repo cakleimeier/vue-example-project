@@ -1,0 +1,25 @@
+// MD Themes
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme("default", (
+  primary: #EE5F20, // The primary color of your brand
+  accent: #E9E4DC // The secondary color of your brand
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
+
+// Settings
+$orange: #EE5F20;
+$buff: #E9E4DC;
+$white: #FFFFFF;
+$charcoal: #31211B;
+$darkgrey: #A2A2A2;
+$lightgrey: #D1CDC9;
+
+// Components
+@import "hero";
+
+// Common Styles
+.background-image {
+  object-fit: cover;
+}
