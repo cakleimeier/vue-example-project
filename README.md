@@ -1,4 +1,9 @@
 # vue-example-project
+## Roadmap
+1. Hero
+2. Top line nav
+3. Homepage
+4. Contact Form
 
 ## Project setup
 ```
