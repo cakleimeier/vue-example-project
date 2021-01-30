@@ -1,5 +1,5 @@
 <template>
-  <section class="body">
+  <section class="body md-layout">
     <Navigation />
     <Hero />
     <ContactForm />
