@@ -1,0 +1,21 @@
+.hero {
+  background-color: $buff;
+  height: 100vh;
+  text-align: center;
+
+  h1 {
+    @include font-jumbotron($color: $white, $lh: $short-line-height);
+  }
+
+  h2 {
+    @include font-quote($lh: $medium-line-height);
+  }
+
+  p {
+    @include font-quote($size: 1.2em, $lh: $medium-line-height);
+  }
+
+  img {
+    width: 26em;
+  }
+}
