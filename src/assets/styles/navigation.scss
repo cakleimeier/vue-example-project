@@ -3,7 +3,7 @@
   text-align: center;
 
   a.nav-item {
-    @include small-text($transform: 'uppercase');
+    @include small-text($transform: uppercase);
   }
 
   img.nav-logo {
