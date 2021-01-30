@@ -1,21 +1,21 @@
 <template>
   <section class="body">
     <Navigation />
-    <Carousel />
+    <Hero />
     <ContactForm />
   </section>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
-import Carousel from './components/Carousel.vue';
+import Hero from './components/Hero.vue';
 import ContactForm from './components/ContactForm.vue';
 
 export default {
   name: 'App',
   components: {
     Navigation,
-    Carousel,
+    Hero,
     ContactForm
   }
 }
