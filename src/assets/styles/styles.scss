@@ -48,7 +48,7 @@ $small-text-size: 1.2em;
   }
 }
 
-@mixin font-quote($size: false, $color: false, $weight: false,  $lh: false) {
+@mixin font-quote($size: false, $color: false, $weight: false, $lh: false) {
   font-family: 'Archivo Medium', sans-serif;
 
   @if $size {
@@ -74,7 +74,7 @@ $small-text-size: 1.2em;
   }
 }
 
-@mixin small-text($size: false, $color: false, $weight: false,  $lh: false, $transform: false){
+@mixin small-text($size: false, $color: false, $weight: false, $lh: false, $transform: false){
   font-family: 'Archivo Medium', sans-serif;
 
   @if $size {
@@ -104,6 +104,53 @@ $small-text-size: 1.2em;
   }
 }
 
+@mixin input-font($color: false, $lh: false) {
+  font-family: 'Archivo Regular', sans-serif;
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: $charcoal;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin input-styles($height: false) {
+  display: block;
+  flex: 1;
+  border: none;
+  border-bottom: 2px solid $lightgrey;
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: 1.2em;
+  resize: vertical;
+  width: 100%;
+
+  @if $height {
+    height: $height;
+  } @else {
+    height: 2em;
+  }
+
+  ::-webkit-input-placeholder { /* Edge */
+    color: $darkgrey;
+    font-family: 'Archivo Regular', sans-serif;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $darkgrey;
+    font-family: 'Archivo Regular', sans-serif;
+  }
+
+  ::placeholder {
+    color: $darkgrey;
+    font-family: 'Archivo Regular', sans-serif;
+  }
+}
+
 // Common Styles
 .body {
   background-color: $buff;
@@ -122,3 +169,4 @@ h1, h2, h3, h4, h5, h6, p {
 // Components
 @import "hero";
 @import "navigation";
+@import "form";
