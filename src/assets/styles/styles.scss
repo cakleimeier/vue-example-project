@@ -10,11 +10,65 @@
 
 // Settings
 $orange: #EE5F20;
-$buff: #E9E4DC;
+$buff: #F4F1ED;
 $white: #FFFFFF;
 $charcoal: #31211B;
 $darkgrey: #A2A2A2;
 $lightgrey: #D1CDC9;
+$short-line-height: .75em;
+$medium-line-height: 1em;
+$tall-line-height: 1.25em;
+
+// Typography
+@mixin font-jumbotron($size: false, $color: false, $weight: false,  $lh: false) {
+  font-family: 'Archivo Bold', sans-serif;
+  @if $size {
+    font-size: $size;
+  } @else {
+    font-size: 21em;
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: $charcoal;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  } @else {
+    font-weight: normal;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin font-quote($size: false, $color: false, $weight: false,  $lh: false) {
+  font-family: 'Archivo Medium', sans-serif;
+  @if $size {
+    font-size: $size;
+  } @else {
+    font-size: 1.5em;
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: $lightgrey;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  } @else {
+    font-weight: normal;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+}
 
 // Components
 @import "hero";
@@ -22,4 +76,9 @@ $lightgrey: #D1CDC9;
 // Common Styles
 .background-image {
   object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
