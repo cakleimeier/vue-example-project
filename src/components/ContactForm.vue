@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Hompage',
+  name: 'ContactForm',
   props: {}
 }
 </script>
