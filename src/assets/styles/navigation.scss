@@ -1,0 +1,13 @@
+.navigation {
+  padding: 2em;
+  text-align: center;
+
+  a.nav-item {
+    @include small-text($transform: 'uppercase');
+  }
+
+  img.nav-logo {
+    width: 13.5em;
+    height: 2em;
+  }
+}
