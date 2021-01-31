@@ -5,6 +5,7 @@
     <ContactForm @submitForm="submitForm" :open="openModal"/>
     <div class="success-message" v-if="formSubmitted">
       <h6>Your form has been submitted!</h6>
+      <button class="close-button" @click="closeSuccessMessage">OK</button>
     </div>
   </section>
 </template>
@@ -27,6 +28,9 @@ export default {
     },
     submitForm() {
       this.formSubmitted = true;
+    },
+    closeSuccessMessage() {
+      this.formSubmitted = false;
     }
   },
   data() {

@@ -26,7 +26,7 @@
         <a href="#" class="nav-item">Blog</a>
       </div>
       <div class="md-layout-item md-size-50">
-        <a href="#contact" class="nav-item" @click="openModal">Contact</a>
+        <a href="#" class="nav-item" @click="openModal">Contact</a>
       </div>
     </div>
   </section>

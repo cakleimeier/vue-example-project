@@ -1,5 +1,5 @@
 <template>
-  <section class="modal-background" v-if="open">
+  <section class="modal-background" v-if="open && showModal">
     <article class="modal-body">
       <form class="contact-form" @submit="validateForm" novalidate="true" id="contact">
         <fieldset>
@@ -52,6 +52,10 @@ export default {
     open: String
   },
   methods : {
+    // Close modal upon form submission
+    closeModal(){
+      this.showModal = false;
+    },
     // Check for a valid email address
     validEmail: function (email) {
       var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -94,6 +98,7 @@ export default {
       } else {
         this.$emit('submitForm');
         e.preventDefault();
+        this.closeModal();
       }
     }
   },
@@ -107,7 +112,8 @@ export default {
         name    : false,
         email   : false,
         message : false
-      }
+      },
+      showModal: true
     }
   }
 }
