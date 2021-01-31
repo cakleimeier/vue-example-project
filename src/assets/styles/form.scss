@@ -31,12 +31,11 @@
   }
 
   button {
-    background-color: $orange;
-    border: none;
-    color: $white;
-    font-family: 'Archivo Regular', sans-serif;
-    font-size: $small-text-size;
-    padding: 1em;
+    @include button-styles();
+
+    &:disabled {
+      background-color: rgba(238, 95, 32, .5);
+    }
   }
 
   label {
@@ -46,5 +45,23 @@
   span.error {
     @include small-text($transform: uppercase, $color: $orange);
     padding: 1.2em 0;
+  }
+}
+
+.success-message {
+  @include small-text($size: 1.75em, $transform: uppercase, $color: $white);
+
+  background-color: $orange;
+  left: 33%;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  top: 1em;
+  width: 33%;
+
+  .close-button {
+    @include button-styles($background: $white, $color: $orange, $size: 1em, $padding: .2em 1em);
+
+    margin-top: 1.5em;
   }
 }

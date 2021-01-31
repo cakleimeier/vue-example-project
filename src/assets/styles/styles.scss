@@ -151,6 +151,35 @@ $small-text-size: 1.2em;
   }
 }
 
+@mixin button-styles($background: false, $color: false, $padding: false, $size: false) {
+  @if($background) {
+    background-color: $background;
+  } @else {
+    background-color: $orange;
+  }
+
+  @if($color) {
+    color: $color;
+  } @else {
+    color: $white;
+  }
+
+  @if($size) {
+    font-size: $size;
+  } @else {
+    font-size: $small-text-size;
+  }
+
+  @if($padding) {
+    padding: $padding;
+  } @else {
+    padding: 1em;
+  }
+
+  border: none;
+  font-family: 'Archivo Regular', sans-serif;
+}
+
 // Common Styles
 .body {
   background-color: $buff;
