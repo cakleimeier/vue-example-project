@@ -1,7 +1,7 @@
 <template>
-  <section class="modal-background">
+  <section class="modal-background" v-if="open">
     <article class="modal-body">
-      <form class="contact-form" @submit="validateForm" novalidate="true">
+      <form class="contact-form" @submit="validateForm" novalidate="true" id="contact">
         <fieldset>
           <label for="name">Full Name</label>
           <input
@@ -48,7 +48,9 @@
 <script>
 export default {
   name    : 'ContactForm',
-  props   : {},
+  props   : {
+    open: String
+  },
   methods : {
     // Check for a valid email address
     validEmail: function (email) {
@@ -89,8 +91,10 @@ export default {
       // If there are errors, do not submit the form
       if (this.invalid) {
         e.preventDefault();
+      } else {
+        this.$emit('submitForm');
+        e.preventDefault();
       }
-
     }
   },
   data() {

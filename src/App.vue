@@ -1,8 +1,11 @@
 <template>
   <section class="body md-layout">
-    <Navigation />
+    <Navigation @open="open"/>
     <Hero />
-    <ContactForm />
+    <ContactForm @submitForm="submitForm" :open="openModal"/>
+    <div class="success-message" v-if="formSubmitted">
+      <h6>Your form has been submitted!</h6>
+    </div>
   </section>
 </template>
 
@@ -17,6 +20,20 @@ export default {
     Navigation,
     Hero,
     ContactForm
+  },
+  methods : {
+    open() {
+      this.openModal = true;
+    },
+    submitForm() {
+      this.formSubmitted = true;
+    }
+  },
+  data() {
+    return {
+      openModal: false,
+      formSubmitted : false
+    }
   }
 }
 </script>
